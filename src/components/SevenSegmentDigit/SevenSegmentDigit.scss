@@ -1,0 +1,59 @@
+@use "../../styles/variables" as v;
+
+.ssd {
+    position: relative;
+    box-sizing: border-box;
+    margin: calc(v.$seg-size * 0.3);
+    width: calc(v.$seg-size * 0.995);
+    height: calc(v.$seg-size * 2.025);
+
+    &__segment {
+        position: absolute;
+        width: v.$seg-size;
+        height: v.$seg-size;
+        clip-path: polygon(
+            90% 0,
+            100% 10%,
+            100% 90%,
+            90% 100%,
+            80% 90%,
+            80% 10%
+        );
+
+        &--on {
+            background: linear-gradient(90deg, gold, yellow);
+        }
+
+        &--off {
+            background: rgba(127.5, 127.5, 127.5, 0.125);
+        }
+
+        &--A {
+            transform: rotate(270deg) translateX(11.5%);
+        }
+
+        &--B {
+            transform: rotate(0deg) translateX(11.5%);
+        }
+
+        &--C {
+            transform: rotate(0deg) translateX(11.5%) translateY(103%);
+        }
+
+        &--D {
+            transform: rotate(90deg) translateX(114.5%);
+        }
+
+        &--E {
+            transform: rotate(180deg) translateX(11.5%) translateY(-103%);
+        }
+
+        &--F {
+            transform: rotate(180deg) translateX(11.5%);
+        }
+
+        &--G {
+            transform: rotate(90deg) translateX(11.5%);
+        }
+    }
+}

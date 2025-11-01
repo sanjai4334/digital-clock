@@ -1,0 +1,20 @@
+@use "../../styles/variables" as v;
+
+.separator {
+    position: relative;
+    margin: calc(v.$seg-size * -0.2);
+    width: calc(v.$seg-size * 0.995);
+    height: calc(v.$seg-size * 2.025);
+
+    &__segment {
+        position: absolute;
+        width: v.$seg-size;
+        height: v.$seg-size;
+        clip-path: polygon(50% 40%, 60% 50%, 50% 60%, 40% 50%);
+        background: linear-gradient(90deg, gold, yellow);
+
+        &--2 {
+            transform: translateY(103%);
+        }
+    }
+}
