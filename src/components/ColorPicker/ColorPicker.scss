@@ -1,0 +1,9 @@
+.color-picker {
+    position: fixed;
+    bottom: 1rem;
+    left: 50%;
+    transform: translateX(-50%);
+
+    border: 2px solid var(--font-color);
+    border-radius: 5%;
+}

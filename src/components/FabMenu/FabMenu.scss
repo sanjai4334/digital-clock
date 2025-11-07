@@ -1,0 +1,47 @@
+.fab-menu {
+    position: fixed;
+    bottom: 1rem;
+    right: 1rem;
+
+    display: flex;
+    align-items: center;
+    flex-direction: column-reverse;
+    gap: 0.5rem;
+
+    border: 2px solid var(--font-color);
+    border-radius: 100vmax;
+
+    max-height: 2.215rem;
+    padding: 0.25rem;
+    overflow: hidden;
+
+    transition: max-height 0.5s ease;
+
+    &--open {
+        max-height: 50vh;
+    }
+
+    &__item {
+        all: unset;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        height: 2rem;
+        width: 2rem;
+        aspect-ratio: 1/1;
+
+        border: 2px solid var(--font-color);
+        border-radius: 50%;
+
+        &--toggle .fab-menu__icon {
+            transition: transform 0.5s ease;
+            transform-origin: center;
+        }
+    }
+
+    &--open &__item--toggle .fab-menu__icon {
+        transform: rotate(-90deg);
+    }
+}

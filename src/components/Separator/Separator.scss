@@ -11,7 +11,7 @@
         width: v.$seg-size;
         height: v.$seg-size;
         clip-path: polygon(50% 40%, 60% 50%, 50% 60%, 40% 50%);
-        background: linear-gradient(90deg, gold, yellow);
+        background: var(--segment-color);
 
         &--2 {
             transform: translateY(103%);

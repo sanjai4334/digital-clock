@@ -1,12 +1,27 @@
-body {
-  all: unset;
+@use "./variables" as v;
 
-  #root {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100dvh;
-    box-sizing: border-box;
-    background-color: black;
-  }
+[data-theme="light"] {
+    --bg-color: #{v.$light-bg};
+    --font-color: #{v.$light-font};
+}
+
+[data-theme="dark"] {
+    --bg-color: #{v.$dark-bg};
+    --font-color: #{v.$dark-font};
+}
+
+body {
+    all: unset;
+
+    #root {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100dvh;
+        box-sizing: border-box;
+        background-color: var(--bg-color);
+        color: var(--font-color);
+        transition: background-color 0.5s ease, color 0.5s ease,
+            border-color 0.5s ease;
+    }
 }

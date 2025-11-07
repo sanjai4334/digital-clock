@@ -1,5 +1,9 @@
 @use "../../styles/variables" as v;
 
+:root {
+    --segment-color: linear-gradient(90deg, gold, yellow);
+}
+
 .ssd {
     position: relative;
     box-sizing: border-box;
@@ -21,7 +25,7 @@
         );
 
         &--on {
-            background: linear-gradient(90deg, gold, yellow);
+            background: var(--segment-color);
         }
 
         &--off {
