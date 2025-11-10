@@ -61,3 +61,16 @@
         }
     }
 }
+
+@media (max-width: 600px) {
+    .ssd {
+        margin: calc(v.$seg-size-mobile * 0.3);
+        width: calc(v.$seg-size-mobile * 0.995);
+        height: calc(v.$seg-size-mobile * 2.025);
+
+        &__segment {
+            width: v.$seg-size-mobile;
+            height: v.$seg-size-mobile;
+        }
+    }
+}

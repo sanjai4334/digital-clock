@@ -11,13 +11,13 @@
 }
 
 body {
-    all: unset;
+    margin: 0;
 
     #root {
         display: flex;
         justify-content: center;
         align-items: center;
-        height: 100dvh;
+        height: 100vh;
         box-sizing: border-box;
         background-color: var(--bg-color);
         color: var(--font-color);
