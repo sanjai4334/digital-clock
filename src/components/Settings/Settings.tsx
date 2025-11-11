@@ -1,4 +1,8 @@
-import { faDroplet, faMoon, faSun } from "@fortawesome/free-solid-svg-icons";
+import {
+    faDroplet,
+    faMoon,
+    faSun
+} from "@fortawesome/free-solid-svg-icons";
 import FabMenu from "../FabMenu/FabMenu";
 import useSettings from "./useSettings";
 import ColorPicker from "../ColorPicker/ColorPicker";
@@ -12,10 +16,12 @@ const Settings = () => {
             <FabMenu
                 menuItems={[
                     {
+                        title: theme === "dark" ? "Dark theme" : "Light theme",
                         icon: theme === "dark" ? faMoon : faSun,
                         callback: toggleTheme
                     },
                     {
+                        title: "Clock color",
                         icon: faDroplet,
                         callback: () => setShowColorPicker(!showColorPicker)
                     }
