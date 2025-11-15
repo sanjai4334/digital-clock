@@ -2,12 +2,12 @@
 
 [data-theme="light"] {
     --bg-color: #{v.$light-bg};
-    --font-color: #{v.$light-font};
+    --text-color: #{v.$light-font};
 }
 
 [data-theme="dark"] {
     --bg-color: #{v.$dark-bg};
-    --font-color: #{v.$dark-font};
+    --text-color: #{v.$dark-font};
 }
 
 body {
@@ -20,7 +20,7 @@ body {
         height: 100vh;
         box-sizing: border-box;
         background-color: var(--bg-color);
-        color: var(--font-color);
+        color: var(--text-color);
         transition: background-color 0.5s ease, color 0.5s ease,
             border-color 0.5s ease;
     }

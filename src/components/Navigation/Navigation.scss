@@ -1,0 +1,42 @@
+.nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    width: 100%;
+
+    position: fixed;
+    top: 0;
+    left: 0;
+
+    height: 2rem;
+    font-family: Arial;
+
+    transition: all 2s ease;
+
+    &__item {
+        display: flex;
+        justify-content: start;
+        align-items: center;
+        flex-direction: column;
+        gap: 0.5rem;
+
+        text-decoration: none;
+        color: var(--text-color);
+        opacity: 0.6;
+
+        &--active {
+            opacity: 1;
+        }
+
+        &:hover {
+            opacity: 0.85;
+            max-height: 3rem;
+        }
+
+        margin-top: 2rem;
+        max-height: 1rem;
+        overflow: hidden;
+        transition: all 0.5s ease;
+    }
+}

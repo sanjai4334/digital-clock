@@ -8,7 +8,7 @@
     flex-direction: column-reverse;
     gap: 0.5rem;
 
-    border: 2px solid var(--font-color);
+    border: 2px solid var(--text-color);
     border-radius: 100vmax;
 
     max-height: 2.215rem;
@@ -32,7 +32,7 @@
         width: 2rem;
         aspect-ratio: 1/1;
 
-        border: 2px solid var(--font-color);
+        border: 2px solid var(--text-color);
         border-radius: 50%;
 
         &--toggle .fab-menu__icon {
