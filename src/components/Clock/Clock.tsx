@@ -4,6 +4,12 @@ import SevenSegmentDigit from "../SevenSegmentDigit/SevenSegmentDigit";
 import Separator from "../Separator/Separator";
 
 const Clock = () => {
+    const [time, setTime] = useState<{
+        hour: string;
+        min: string;
+        sec: string;
+    }>();
+
     useEffect(() => {
         const updateTime = () => {
             const now = new Date();
@@ -18,12 +24,6 @@ const Clock = () => {
         const timer = setInterval(updateTime, 1000);
         return () => clearInterval(timer);
     }, []);
-
-    const [time, setTime] = useState<{
-        hour: string;
-        min: string;
-        sec: string;
-    }>();
 
     return (
         <>
