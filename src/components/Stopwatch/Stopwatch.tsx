@@ -9,8 +9,6 @@ import { Activity } from "react";
 const Stopwatch = () => {
     const { time, laps, startWatch, resetWatch, pauseWatch, addLap, state } =
         useStopwatch();
-    console.log("time: ", time);
-    console.log("state: ", state);
     return (
         <>
             <div className="stopwatch">
@@ -46,6 +44,7 @@ const Stopwatch = () => {
                             Reset
                         </button>
                         <button
+                            style={{display: "none"}}
                             className={"btn-circle btn-outline"}
                             onClick={addLap}
                             disabled={state === "paused"}

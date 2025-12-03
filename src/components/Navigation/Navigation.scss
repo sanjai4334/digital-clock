@@ -1,13 +1,14 @@
 .nav {
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
     gap: 1rem;
-    width: 100%;
+    width: 20%;
 
     position: fixed;
     top: 0;
-    left: 0;
+    left: 50%;
+    transform: translateX(-50%);
 
     height: 2rem;
     font-family: Arial;

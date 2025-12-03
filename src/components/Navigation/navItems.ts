@@ -1,5 +1,4 @@
 import {
-    faAlarmClock,
     faClock,
     faHourglassEnd,
     faStopwatch,
@@ -18,7 +17,6 @@ export interface NavItem {
 
 export const navItems: NavItem[] = [
     { link: "/clock", label: "Clock", icon: faClock, component: Clock },
-    { link: "/alarm", label: "Alarm", icon: faAlarmClock, component: Clock },
     { link: "/timer", label: "Timer", icon: faHourglassEnd, component: Clock },
     { link: "/stopwatch", label: "Stopwatch", icon: faStopwatch, component: Stopwatch }
 ];

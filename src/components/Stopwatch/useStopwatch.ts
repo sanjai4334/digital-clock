@@ -11,7 +11,7 @@ const useStopwatch = () => {
         sec: string;
         ms: string;
     } | null>(null);
-    const [state, setState] = useState<"idle" | "running" | "paused">();
+    const [state, setState] = useState<"idle" | "running" | "paused">("idle");
 
     const startRef = useRef<Dayjs>(null);
     const accTimeRef = useRef<number>(undefined);
