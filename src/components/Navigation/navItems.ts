@@ -7,6 +7,7 @@ import {
 import Clock from "../Clock/Clock";
 import type { JSX } from "react";
 import Stopwatch from "../Stopwatch/Stopwatch";
+import Timer from "../Timer/Timer";
 
 export interface NavItem {
     link: string;
@@ -17,6 +18,6 @@ export interface NavItem {
 
 export const navItems: NavItem[] = [
     { link: "/clock", label: "Clock", icon: faClock, component: Clock },
-    { link: "/timer", label: "Timer", icon: faHourglassEnd, component: Clock },
+    { link: "/timer", label: "Timer", icon: faHourglassEnd, component: Timer },
     { link: "/stopwatch", label: "Stopwatch", icon: faStopwatch, component: Stopwatch }
 ];
