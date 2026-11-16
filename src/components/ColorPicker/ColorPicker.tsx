@@ -2,6 +2,7 @@ import "./ColorPicker.scss";
 import { Activity, useEffect, useRef, useState } from "react";
 import { HexColorPicker } from "react-colorful";
 import useClickOutside from "../../_hooks/useClickOutside";
+import { getStoredItem, setStoredItem } from "../../utils/storage";
 
 interface ColorPickerProps {
     show: boolean;
@@ -10,14 +11,14 @@ interface ColorPickerProps {
 
 const ColorPicker = ({ show, close }: ColorPickerProps) => {
     const [color, setColor] = useState(
-        localStorage.getItem("segment-color") ?? "yellow"
+        () => getStoredItem("segment-color") ?? "yellow"
     );
     const colorPickerRef = useRef(null);
 
     useClickOutside(colorPickerRef, close);
 
     useEffect(() => {
-        localStorage.setItem("segment-color", color);
+        setStoredItem("segment-color", color);
         document.documentElement.style.setProperty("--segment-color", color);
     }, [color]);
 

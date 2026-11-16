@@ -1,13 +1,14 @@
 import { useEffect, useState } from "react";
+import { getStoredItem, setStoredItem } from "../../utils/storage";
 
 const useSettings = () => {
     
     // Theme Control
-    const [theme, setTheme] = useState(localStorage.getItem("theme") ?? "dark");
+    const [theme, setTheme] = useState(() => getStoredItem("theme") ?? "dark");
     
     useEffect(() => {
         document.documentElement.setAttribute("data-theme", theme);
-        localStorage.setItem("theme", theme);
+        setStoredItem("theme", theme);
     }, [theme]);
 
     const toggleTheme = () => {
